@@ -7,13 +7,24 @@ import sobre from './sobre';
 import vitorias from './vitorias';
 
 
+
 const Tab = createBottomTabNavigator();
 
 export default function App() {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          tabBarLabelStyle:{fontSize:16, fontWeight:'bold', color:'black'},
+          tabBarActiveTintColor:'white',
+          tabBarActiveBackgroundColor: "white",
+          tabBarStyle: {
+          backgroundColor: '#FFDB46'
+          }
+        }}
+      >
+        
         <Tab.Screen
           name='Início' component={inicio}
         />
