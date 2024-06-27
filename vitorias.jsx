@@ -9,47 +9,43 @@ export default function vitorias() {
 
   return (
     <ScrollView>
-    <View style={estilo.container}>
-      <Text style={estilo.dados}>
-        <Text style={estilo.titulo}>
-        Senna em Números
+    <View style={estilo2.vPai}>
+        <Text style={estilo2.sTitulo}>
+          Senna em Números
         </Text>
-        <Text  style={estilo.textoDados}>
-        Ele conquistou três campeonatos mundiais em 1988,1990,1991, e ganhou 41 Grandes Prêmios e 65 pole positions.
-        </Text>
-  
-      <Text style={estilo.vitorias}>
-      161 GPS DISPUTADOS 
-      
-      
-        65 POLE POSITIONS
-     
-
-      
-        41 VITÓRIAS
-     
-     
-        3 VEZES CAMPEÃO MUNDIAL
+      <Text style={estilo2.txtBio}>
+        Ele conquistou três campeonatos mundiais em 1988, 1990 e 1991, e ganhou 41 Grandes Prêmios e 65 pole position
       </Text>
-       
-      </Text>
-   
 
-
-
-
-    </View>
+      </View>
     </ScrollView>
   );
 }
 
-const estilo = StyleSheet.create({
+const estilo2 = StyleSheet.create({
   container:{
     backgroundColor: 'rgba(255,255,255,255)', 
     flex:1,
     marginTop: 0,
     justifyContent:'flex-start', 
     alignItems:'center',
+  },
+  txtBio:{
+    color: 'white',
+    textAlign:'justify',
+    margin: 20
+  },
+sTitulo:{
+    fontWeight: 'bold',
+    fontSize: 20,
+    color: 'white',
+    textAlign: 'center',
+  },
+vPai:{
+    backgroundColor: 'gray',
+    textAlign: 'center',
+    width: 380,
+    borderRadius:10
   },
 dados:{
   textAlign:'center',

@@ -3,23 +3,35 @@ import { ImageBackground,StyleSheet, Text, View, Button, ScrollView } from 'reac
 import { Image } from 'expo-image';
 // import Avatar from './assets/avatar.jpg';
 import perfil from './assets/perfil.png';
+import fundo from './assets/fyndo.png'
 
 
 
 export default function inicio() {
 
   return (
-      <View style={estilo.container}>
+    
+      <ImageBackground style={estilo.container} imageStyle={{
+        height:'100%' ,
+        width:400
+      }}
+        source={fundo}
+        blurRadius={5}        
+      >
       <Image
         source={perfil}
         style={estilo.avatar}
       />
-      <Text style={estilo.bio}>
-        Ayrton senna
-        <br />
+      <View style={estilo.vPai}>
+        <Text style={estilo.sTitulo}>
+          Ayrton Senna
+        </Text>
+      <Text style={estilo.txtBio}>
         Atravez desse APP, você vai conhecer um pouco sobre quem foi esse grande piloto.
       </Text>
-    </View>
+
+      </View>
+    </ImageBackground>
     
     
 
@@ -30,10 +42,28 @@ export default function inicio() {
 
 const estilo = StyleSheet.create({
   container:{
-    backgroundColor: 'rgba(255,255,255,255)', 
     flex:1, 
     justifyContent:'center', 
     alignItems:'center'
+  },
+  txtBio:{
+    color: 'white',
+    textAlign:'justify',
+    margin: 20
+  },
+  sTitulo:{
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: 'white',
+    textAlign: 'center',
+    // marginBottom: 15,
+    marginTop: 20
+  },
+  vPai:{
+    backgroundColor: 'black',
+    textAlign: 'center',
+    width: 380,
+    borderRadius:10
   },
   avatar:{
     width:200,
@@ -43,24 +73,17 @@ const estilo = StyleSheet.create({
     margin: 30,
     borderTopColor: "#000",
   },
-  image: {
-    flex: 1,
-    resizeMode: 'cover',
-    justifyContent: 'center',
-  },
-  letras:{
-    fontSize:20
-  },
-  icons:{
-    justifyContent: 'center'
-  },
-  bio:{
-    textAlign:'center',
-    backgroundColor: "#1C1C1C",
-    alignItems: "center",
-    color: "white",
-    width: 380,
-    borderRadius: 5
-  }
+  // image: {
+  //   flex: 1,
+  //   resizeMode: 'cover',
+  //   justifyContent: 'center',
+  // },
+  // letras:{
+  //   fontSize:20
+  // },
+  // icons:{
+  //   justifyContent: 'center'
+  // },
+  
   
 });
